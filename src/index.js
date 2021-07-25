@@ -39,12 +39,12 @@ function displayTemperature(response) {
   );
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector("#weather").innerHTML = response.data.weather[0].main;
-  document.querySelector("#wind").innerHTML = `${Math.round(
+  document.querySelector("#wind").innerHTML = `Wind: ${Math.round(
     response.data.wind.speed
   )} km/h`;
   document.querySelector(
     "#humidity"
-  ).innerHTML = `${response.data.main.humidity}%`;
+  ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
 }
 
 function displayTemperatureFromLocation(response) {
@@ -53,12 +53,12 @@ function displayTemperatureFromLocation(response) {
   );
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector("#weather").innerHTML = response.data.weather[0].main;
-  document.querySelector("#wind").innerHTML = `${Math.round(
+  document.querySelector("#wind").innerHTML = `Wind: ${Math.round(
     response.data.wind.speed
   )} km/h`;
   document.querySelector(
     "#humidity"
-  ).innerHTML = `${response.data.main.humidity}%`;
+  ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
 }
 
 let form = document.querySelector("#search-engine");
