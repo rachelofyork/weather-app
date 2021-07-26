@@ -30,37 +30,57 @@
   margin: 10px;
 }
 
-h2 {
-  padding-left: 600px;
+h1 {
+  text-align: center;
+  font-size: 60px;
+  padding-top: 20px;
 }
 
-h1 {
-  padding-left: 75px;
-  font-size: 50px;
-  padding-top: 20px;
+h2 {
+  text-align: center;
+  font-size: 30px;
 }
 
 .today {
   margin: 10px;
   align-items: center;
   padding-left: 150px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .weather-description {
-  font-size: 40px;
-  padding-right: 100px;
+  font-size: 20px;
+  padding-right: 10px;
+  text-align: center;
 }
 .weather-icon {
-  width: 100px;
+  width: 150px;
   padding: 10px;
-  margin: 10px;
+  margin-top: 10px;
+  margin-left: 80px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+}
+
+.weather {
+  text-align: center;
+  padding-left: 200px;
+  font-weight: bolder;
 }
 
 .currentTemperature {
-  font-size: 70px;
+  font-size: 100px;
   margin: 10px;
-  padding-left: 100px;
+  padding-left: 250px;
+  padding-bottom: 40px;
+  padding-right: 0px;
+}
+
+.weatherDetails {
+  margin: 10px;
+  padding-left: 10px;
+  font-size: 20px;
+  padding-top: 25px;
 }
 
 .tempUnits {
@@ -80,12 +100,6 @@ h1 {
 .fahrenheit-link:hover {
   font-size: 25px;
   color: black;
-}
-
-.weatherDetails {
-  margin: 10px;
-  padding-left: 100px;
-  font-size: 20px;
 }
 
 hr {

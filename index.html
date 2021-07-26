@@ -36,25 +36,29 @@
           value="Current Location"
         />
 </form>
-        <h2>Friday 10:00</h2>
+          <h1>London</h1>
 
-        <h1>London</h1>
+          <h2>Friday 10:00</h2>
+
+       
 
         <div class="row today">
-          <div class="col-md-auto weather-description" id = "weather">Sunny</div>
-          <div class="col-md-auto">
-            <img src="src/images/sun.png" alt="Sun" class="weather-icon" />
+          <div class="col-md-auto weather-description"> 
+            <div id = 
+            "weather-icon" class = "weather-icon"> <img src="src/images/sun.png" alt="Sun" class="weather-icon" /></div>
+            <span id = "weather" class = "weather">Sunny</span>
           </div>
+          
           <div class="col-md-auto currentTemperature">
-            <span id="temperature">18</span><span class="tempUnits"
+            <span id="temperature">18</span>
+          </div>
+          <div class = "col-md-auto weatherDetails"><span class="tempUnits"
             ><a href="#" id="celsius-link" class = "celsius-link">°C</a>|<a href="" id="fahrenheit-link" class="fahrenheit-link"
               >°F</a
-            >
-          </div>
-          <div class="col-md-auto weatherDetails">
-            <span class="wind" id="wind">Wind: 15mph</span> <br />
-            <span class="humidity" id = "humidity">Humidity: 3%</span>
-          </div>
+            ><br />
+             <span class="wind" id="wind">Wind: 15mph</span> <br />
+            <span class="humidity" id = "humidity">Humidity: 3%</span> </div>
+          
         </div>
 
         <hr />
