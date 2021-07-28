@@ -33,7 +33,7 @@
 h1 {
   text-align: center;
   font-size: 60px;
-  padding-top: 20px;
+  padding-top: 5px;
 }
 
 h2 {
@@ -45,7 +45,6 @@ h2 {
   margin: 10px;
   align-items: center;
   padding-left: 150px;
-  padding-bottom: 10px;
 }
 
 .weather-description {
@@ -56,35 +55,31 @@ h2 {
 .weather-icon {
   width: 150px;
   padding: 10px;
-  margin-top: 10px;
+
   margin-left: 80px;
   margin-right: 10px;
   margin-bottom: 0px;
 }
 
-.weather {
-  text-align: center;
-}
-
 .currentTemperature {
-  font-size: 120px;
-  margin: 10px;
-  padding-left: 250px;
+  font-size: 110px;
+  margin: 15px;
+  padding-left: 150px;
   padding-bottom: 30px;
-  padding-right: 0px;
+  padding-top: 5px;
 }
 
 .weatherDetails {
   margin: 10px;
-  padding-left: 10px;
-  font-size: 20px;
-  padding-top: 25px;
+  padding-left: 30px;
+  font-size: 25px;
+  padding-top: 5px;
 }
 
 .tempUnits {
   font-size: 20px;
   position: relative;
-  top: -35px;
+  top: -55px;
   color: black;
 }
 
