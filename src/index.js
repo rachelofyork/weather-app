@@ -1,3 +1,28 @@
+function lightTheme(event){
+  event.preventDefault();
+ document.getElementById('weatherApp').style.background = 'teal'
+};
+ let lightButton = document.querySelector("#light-theme-button")
+ lightButton.addEventListener("click", lightTheme)
+
+
+function darkTheme(event) {
+  event.preventDefault();
+
+  document.getElementById('weatherApp').style.background = '#303030'
+  document.getElementById('weatherApp').style.color = 'white'
+  document.getElementById('celsius-link').style.color = 'white'
+  document.getElementById('fahrenheit-link').style.color = 'white'
+  
+};
+  
+
+
+
+ let darkButton = document.querySelector("#dark-theme-button")
+ darkButton.addEventListener("click", darkTheme)
+
+
 let now = new Date();
 let h2 = document.querySelector("h2");
 let days = [
