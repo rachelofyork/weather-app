@@ -2,8 +2,9 @@
 
 function lightTheme(event){
   event.preventDefault();
- document.getElementById('weatherApp').style.background = defaultStatus
- document.getElementById('weatherApp').style.color = 'black'
+ 
+document.getElementById('weather-app').style.background =  '#c4ffdd'
+ document.getElementById('weather-app').style.color = 'black'
   document.getElementById('celsius-link').style.color = 'black'
   document.getElementById('fahrenheit-link').style.color = 'black'
   document.getElementById('search-button').style.background = '#5e63b6'
@@ -18,8 +19,8 @@ function lightTheme(event){
 function darkTheme(event) {
   event.preventDefault();
 
-  document.getElementById('weatherApp').style.background = '#303030'
-  document.getElementById('weatherApp').style.color = 'white'
+  document.getElementById('weather-app').style.background = '#303030'
+  document.getElementById('weather-app').style.color = 'white'
   document.getElementById('celsius-link').style.color = 'white'
   document.getElementById('fahrenheit-link').style.color = 'white'
   document.getElementById('search-button').style.background = '#3b0944'

@@ -1,13 +1,8 @@
-.weatherApp {
+.weather-app {
   padding: 20px;
   border: solid 1px black;
   border-radius: 20px;
-  background: linear-gradient(
-    113.5deg,
-    rgb(234, 234, 234) 22.3%,
-    rgb(201, 234, 211) 56.6%,
-    rgb(255, 180, 189) 90.9%
-  );
+  background: #c4ffdd;
   font-family: "Poppins", sans-serif;
   color: black;
   margin-top: 10px;
@@ -26,6 +21,7 @@
   margin-top: 10px;
   margin-bottom: 10px;
   background: #5e63b6;
+  transition: 100ms;
 }
 
 .searchButton:hover {
@@ -36,6 +32,7 @@
   border-radius: 40px;
   margin: 10px;
   background: #e471a7;
+  transition: 100ms;
 }
 
 .currentLocation:hover {
@@ -45,12 +42,11 @@
 .light-theme-button {
   margin-left: 1000px;
   margin-top: -80px;
-  background: linear-gradient(
-    113.5deg,
-    rgb(234, 234, 234) 22.3%,
-    rgb(201, 234, 211) 56.6%,
-    rgb(255, 180, 189) 90.9%
-  );
+  background: #c4ffdd;
+}
+
+.light-theme-button:hover {
+  background: #c4ffdd;
 }
 
 .dark-theme-button {
