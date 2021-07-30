@@ -1,6 +1,15 @@
+//Light/Dark Themes
+
 function lightTheme(event){
   event.preventDefault();
- document.getElementById('weatherApp').style.background = 'teal'
+ document.getElementById('weatherApp').style.background = defaultStatus
+ document.getElementById('weatherApp').style.color = 'black'
+  document.getElementById('celsius-link').style.color = 'black'
+  document.getElementById('fahrenheit-link').style.color = 'black'
+  document.getElementById('search-button').style.background = '#5e63b6'
+  document.getElementById('search-button').style.color = 'white'
+  document.getElementById('current-location').style.background = '#e471a7'
+  document.getElementById('current-location').style.background = '#e471a7'
 };
  let lightButton = document.querySelector("#light-theme-button")
  lightButton.addEventListener("click", lightTheme)
@@ -13,11 +22,16 @@ function darkTheme(event) {
   document.getElementById('weatherApp').style.color = 'white'
   document.getElementById('celsius-link').style.color = 'white'
   document.getElementById('fahrenheit-link').style.color = 'white'
+  document.getElementById('search-button').style.background = '#3b0944'
+  document.getElementById('current-location').style.background = '#b30c7b'
+  document.getElementById('dark-theme-button').style.background = 'black'
+  document.getElementById('dark-theme-button').style.color = 'white'
+
   
 };
   
 
-
+//Date and Time
 
  let darkButton = document.querySelector("#dark-theme-button")
  darkButton.addEventListener("click", darkTheme)
@@ -45,6 +59,8 @@ if (minutes < 10) {
 }
 
 h2.innerHTML = `${day} ${hour}:${minutes}`;
+
+//Weather Search Engine
 
 function search(inputCity) {
   let apiKey = "ff8c3d30b19a1ec2572571f024a657bd";
@@ -106,6 +122,8 @@ function getCurrentLocation(event) {
 
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", getCurrentLocation);
+
+//Unit conversion
 
 function fahrenheit(event) {
   event.preventDefault();
