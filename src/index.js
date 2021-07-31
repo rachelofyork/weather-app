@@ -39,7 +39,7 @@ function darkTheme(event) {
 
 
 let now = new Date();
-let h2 = document.querySelector("h2");
+let date = document.querySelector("#date");
 let days = [
   "Sunday",
   "Monday",
@@ -59,7 +59,7 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 
-h2.innerHTML = `${day} ${hour}:${minutes}`;
+date.innerHTML = `${day} ${hour}:${minutes}`;
 
 //Weather Search Engine
 
