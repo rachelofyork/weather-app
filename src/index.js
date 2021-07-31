@@ -87,6 +87,9 @@ function displayTemperature(response) {
   document.querySelector(
     "#humidity"
   ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
+  let icon = document.querySelector("#icon")
+icon.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+icon.setAttribute("alt", response.data.weather[0].description)
 }
 
 function displayTemperatureFromLocation(response) {
@@ -101,6 +104,9 @@ function displayTemperatureFromLocation(response) {
   document.querySelector(
     "#humidity"
   ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
+  let icon = document.querySelector("#icon")
+icon.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+icon.setAttribute("alt", response.data.weather[0].description)
 }
 
 let form = document.querySelector("#search-engine");
@@ -123,6 +129,7 @@ function getCurrentLocation(event) {
 
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", getCurrentLocation);
+
 
 //Unit conversion
 
