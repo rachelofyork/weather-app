@@ -80,7 +80,7 @@ function displayTemperature(response) {
     response.data.main.temp
   );
   document.querySelector("h1").innerHTML = response.data.name;
-  document.querySelector("#weather").innerHTML = response.data.weather[0].main;
+  document.querySelector("#weather").innerHTML = response.data.weather[0].description;
   document.querySelector("#wind").innerHTML = `Wind: ${Math.round(
     response.data.wind.speed
   )} km/h`;
