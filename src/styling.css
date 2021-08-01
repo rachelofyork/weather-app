@@ -2,7 +2,7 @@
   padding: 20px;
   border: solid 1px black;
   border-radius: 20px;
-  background: #c4ffdd;
+  background: #82e7b7;
   font-family: "Poppins", sans-serif;
   color: black;
   margin-top: 10px;
@@ -42,17 +42,19 @@
 .light-theme-button {
   margin-left: 1000px;
   margin-top: -80px;
-  background: #c4ffdd;
+  background: #82e7b7;
+  border-radius: 40px;
 }
 
 .light-theme-button:hover {
-  background: #c4ffdd;
+  background: #82e7b7;
 }
 
 .dark-theme-button {
   margin-top: -80px;
   background: #303030;
   color: white;
+  border-radius: 40px;
 }
 
 .dark-theme-button:hover {
@@ -81,7 +83,7 @@ h2 {
   text-align: center;
 }
 .weather-icon {
-  width: 150px;
+  width: 170px;
   padding: 10px;
 
   margin-left: 80px;
@@ -101,7 +103,7 @@ h2 {
   margin: 10px;
   padding-left: 30px;
   font-size: 25px;
-  padding-top: 5px;
+  padding-top: 0px;
 }
 
 .weather {

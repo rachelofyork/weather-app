@@ -3,7 +3,7 @@
 function lightTheme(event){
   event.preventDefault();
  
-document.getElementById('weather-app').style.background =  '#c4ffdd'
+document.getElementById('weather-app').style.background =  '#82e7b7'
  document.getElementById('weather-app').style.color = 'black'
   document.getElementById('celsius-link').style.color = 'black'
   document.getElementById('fahrenheit-link').style.color = 'black'
@@ -31,11 +31,10 @@ function darkTheme(event) {
   
 };
   
-
-//Date and Time
-
  let darkButton = document.querySelector("#dark-theme-button")
  darkButton.addEventListener("click", darkTheme)
+
+//Date and Time
 
 
 let now = new Date();
@@ -116,10 +115,6 @@ icon.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weat
 icon.setAttribute("alt", response.data.weather[0].description)
 }
 
-let form = document.querySelector("#search-engine");
-form.addEventListener("submit", handleSubmit);
-
-
 
 function showLocationTemperature(position) {
   let apiKey = "ff8c3d30b19a1ec2572571f024a657bd";
@@ -134,6 +129,11 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(showLocationTemperature);
 
 }
+
+
+let form = document.querySelector("#search-engine");
+form.addEventListener("submit", handleSubmit);
+
 
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", getCurrentLocation);
@@ -165,10 +165,6 @@ celsiusLink.addEventListener("click", displayCelsius);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheit);
-
-
-
-
 
 
 
