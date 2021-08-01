@@ -112,6 +112,7 @@ icon.setAttribute("alt", response.data.weather[0].description)
 let form = document.querySelector("#search-engine");
 form.addEventListener("submit", handleSubmit);
 
+
 search("London");
 
 function showLocationTemperature(position) {
