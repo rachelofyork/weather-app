@@ -123,8 +123,17 @@ h2 {
 
 .celsius-link:hover,
 .fahrenheit-link:hover {
-  font-size: 25px;
   color: black;
+  cursor: default;
+}
+.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.active:hover {
+  text-decoration: underline;
+  cursor: default;
 }
 
 hr {

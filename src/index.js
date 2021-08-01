@@ -87,6 +87,10 @@ function displayTemperature(response) {
   document.querySelector(
     "#humidity"
   ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
+
+
+celsiusTemperature = response.data.main.temp;
+
   let icon = document.querySelector("#icon")
 icon.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 icon.setAttribute("alt", response.data.weather[0].description)
@@ -105,6 +109,9 @@ function displayTemperatureFromLocation(response) {
     "#humidity"
   ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
   let icon = document.querySelector("#icon")
+
+  celsiusTemperature = response.data.main.temp;
+
 icon.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 icon.setAttribute("alt", response.data.weather[0].description)
 }
@@ -113,7 +120,6 @@ let form = document.querySelector("#search-engine");
 form.addEventListener("submit", handleSubmit);
 
 
-search("London");
 
 function showLocationTemperature(position) {
   let apiKey = "ff8c3d30b19a1ec2572571f024a657bd";
@@ -126,6 +132,7 @@ function showLocationTemperature(position) {
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showLocationTemperature);
+
 }
 
 let currentLocation = document.querySelector("#current-location");
@@ -134,20 +141,36 @@ currentLocation.addEventListener("click", getCurrentLocation);
 
 //Unit conversion
 
-function fahrenheit(event) {
+function displayFahrenheit(event) {
   event.preventDefault();
-  let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = 64;
+let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+ let temperature = document.querySelector("#temperature")
+ temperature.innerHTML = Math.round(fahrenheitTemperature)
+ fahrenheitLink.classList.remove("active");
+ celsiusLink.classList.add("active");
 }
 
-function celsius(event) {
+function displayCelsius(event) {
   event.preventDefault();
   let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = 18;
+  temperature.innerHTML = Math.round(celsiusTemperature);
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
 }
+
+let celsiusTemperature = null;
 
 let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", celsius);
+celsiusLink.addEventListener("click", displayCelsius);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", fahrenheit);
+fahrenheitLink.addEventListener("click", displayFahrenheit);
+
+
+
+
+
+
+
+
+search("London");
