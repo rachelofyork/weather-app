@@ -135,7 +135,7 @@ h2 {
 
 .active:hover {
   text-decoration: underline;
-  cursor: default;
+  cursor: pointer;
 }
 
 hr {
