@@ -93,6 +93,12 @@ celsiusTemperature = response.data.main.temp;
   let icon = document.querySelector("#icon")
 icon.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 icon.setAttribute("alt", response.data.weather[0].description)
+
+getForecast(response.data.coord){}
+
+let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}`
+
+
 }
 
 function displayTemperatureFromLocation(response) {
@@ -138,6 +144,42 @@ form.addEventListener("submit", handleSubmit);
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", getCurrentLocation);
 
+//Forecast Section
+
+function displayForecast() {
+let forecastElement = document.querySelector("#forecast")
+
+let forecastHTML = ` <div class = "row">`;
+let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+days.forEach(function(day) {
+forecastHTML =  forecastHTML + ` 
+        
+          <div class = "col-2">
+          <div class = "forecast-date" id = "forecast-date">${day}</div>
+            <div><img
+              src="src/images/sun.png"
+              alt="Overcast"
+              class="smallWeatherIcons"
+              id = "small-weather-icons"></div>
+              <div class = forecast-temperatures> <span class = "max-temperature" id = "max-temperature">20°C </span> 
+                <span class = "min-temperature" id = "min-temperature"> 13°C</span></div>
+
+          
+      
+        </div> `;
+
+      
+});
+console.log(forecastHTML)
+
+        forecastHTML = forecastHTML + `</div>`;
+forecastElement.innerHTML = forecastHTML;
+}
+
+
+
+
+
 
 //Unit conversion
 
@@ -170,3 +212,4 @@ fahrenheitLink.addEventListener("click", displayFahrenheit);
 
 
 search("London");
+displayForecast();
