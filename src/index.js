@@ -92,14 +92,15 @@ celsiusTemperature = response.data.main.temp;
 
   let icon = document.querySelector("#icon")
 icon.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-icon.setAttribute("alt", response.data.weather[0].description)
+icon.setAttribute("alt", response.data.weather[0].description);
 
-getForecast(response.data.coord){}
+getForecast(response.data.coord)
+};
 
-let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}`
 
 
-}
+
+
 
 function displayTemperatureFromLocation(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -119,6 +120,7 @@ function displayTemperatureFromLocation(response) {
 
 icon.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 icon.setAttribute("alt", response.data.weather[0].description)
+getForecast(response.data.coord)
 }
 
 
@@ -134,6 +136,7 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showLocationTemperature);
 
+  getForecast (response.data.coord);
 }
 
 
@@ -146,7 +149,8 @@ currentLocation.addEventListener("click", getCurrentLocation);
 
 //Forecast Section
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily)
 let forecastElement = document.querySelector("#forecast")
 
 let forecastHTML = ` <div class = "row">`;
@@ -170,14 +174,20 @@ forecastHTML =  forecastHTML + `
 
       
 });
-console.log(forecastHTML)
 
-        forecastHTML = forecastHTML + `</div>`;
+
+
+forecastHTML = forecastHTML + `</div>`;
 forecastElement.innerHTML = forecastHTML;
 }
 
 
-
+function getForecast(coordinates){
+  console.log(coordinates);
+   let apiKey = "ff8c3d30b19a1ec2572571f024a657bd";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`
+  axios.get(apiUrl).then(displayForecast);
+}
 
 
 
