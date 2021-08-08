@@ -82,7 +82,7 @@ function displayTemperature(response) {
   document.querySelector("#weather").innerHTML = response.data.weather[0].description;
   document.querySelector("#wind").innerHTML = `Wind: ${Math.round(
     response.data.wind.speed
-  )} km/h`;
+  )}mph`;
   document.querySelector(
     "#humidity"
   ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
@@ -101,7 +101,6 @@ getForecast(response.data.coord)
 
 
 
-
 function displayTemperatureFromLocation(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -110,7 +109,7 @@ function displayTemperatureFromLocation(response) {
   document.querySelector("#weather").innerHTML = response.data.weather[0].main;
   document.querySelector("#wind").innerHTML = `Wind: ${Math.round(
     response.data.wind.speed
-  )} mph`;
+  )}mph`;
   document.querySelector(
     "#humidity"
   ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
