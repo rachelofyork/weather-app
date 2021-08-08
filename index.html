@@ -17,79 +17,97 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app" id = "weather-app">
+      <div class="weather-app" id="weather-app">
         <form id="search-engine">
-        <label for="inputCity" class="form-label"> Search Here</label>
-        <input
-          type="search"
-          id="inputCity"
-          class="form-control search"
-          placeholder="Enter City"
-          autofocus
-          autocomplete="off"
-        />
-        <input class="btn btn-primary searchButton" type="submit" id = "search-button" value="Search" />
-        <input
-          class="btn btn-primary currentLocation"
-          id="current-location"
+          <label for="inputCity" class="form-label"> Search Here</label>
+          <input
+            type="search"
+            id="inputCity"
+            class="form-control search"
+            placeholder="Enter City"
+            autofocus
+            autocomplete="off"
+          />
+          <input
+            class="btn btn-primary searchButton"
+            type="submit"
+            id="search-button"
+            value="Search"
+          />
+          <input
+            class="btn btn-primary currentLocation"
+            id="current-location"
+            type="button"
+            value="Current Location"
+          />
+        </form>
+
+        <button
           type="button"
-          value="Current Location"
-        />
-</form>
+          class="btn btn-info light-theme-button"
+          id="light-theme-button"
+        >
+          Light Theme
+        </button>
+        <button
+          type="button"
+          class="btn btn-info dark-theme-button"
+          id="dark-theme-button"
+        >
+          Dark Theme
+        </button>
+        <h1>London</h1>
 
-<button type="button" class="btn btn-info light-theme-button" id="light-theme-button">Light Theme</button>
-<button type="button" class="btn btn-info dark-theme-button" id="dark-theme-button">Dark Theme</button>
-          <h1>London</h1>
-
-          <h2>Last updated: <span id="date">Friday 10:00</span></h2>
-
-       
+        <h2>Last updated: <span id="date">Friday 10:00</span></h2>
 
         <div class="row today">
-          <div class="col-md-auto weather-description"> 
-            <div id = 
-            "weather-icon" class = "weather-icon"> <img 
-            src="" 
-            alt="Weather Icon" 
-            class="weather-icon"
-            id = "icon" /></div>
-            
+          <div class="col-md-auto weather-description">
+            <div id="weather-icon" class="weather-icon">
+              <img src="" alt="Weather Icon" class="weather-icon" id="icon" />
+            </div>
           </div>
-          
+
           <div class="col-md-auto currentTemperature">
-            <span id="temperature">18</span><span class="tempUnits"
-            ><a href="#" id="celsius-link" class = "celsius-link ">°C</a>  <a href="" id="fahrenheit-link" class="fahrenheit-link active"
-              >°F</a
-            >
+            <span id="temperature">18</span><span class="tempUnits">°C</span>
           </div>
-          <div class = "col-md-auto weatherDetails">
-            <span id = "weather" class = "weather">Sunny</span> <br />
-             <span class="wind" id="wind">Wind: 15mph</span> <br />
-            <span class="humidity" id = "humidity">Humidity: 3%</span> </div>
-          
+          <div class="col-md-auto weatherDetails">
+            <span id="weather" class="weather">Sunny</span> <br />
+            <span class="wind" id="wind">Wind: 15mph</span> <br />
+            <span class="humidity" id="humidity">Humidity: 3%</span>
+          </div>
         </div>
 
         <hr />
 
-       <div class = "forecast" id = "forecast">
-        <div class = "row">
-          <div class = "col-2"><div class = "forecast-date" id = "forecast-date">Tomorrow</div>
-            <div><img
-              src="src/images/sun.png"
-              alt="Overcast"
-              class="smallWeatherIcons"
-              id = "small-weather-icons"></div>
-              <div class = forecast-temperatures> <span class = "max-temperature" id = "max-temperature">20°C </span> 
-                <span class = "min-temperature" id = "min-temperature"> 13°C</span></div>
-
+        <div class="forecast" id="forecast">
+          <div class="row">
+            <div class="col-2">
+              <div class="forecast-date" id="forecast-date">Tomorrow</div>
+              <div>
+                <img
+                  src="src/images/sun.png"
+                  alt="Overcast"
+                  class="smallWeatherIcons"
+                  id="small-weather-icons"
+                />
+              </div>
+              <div class="forecast-temperatures">
+                <span class="max-temperature" id="max-temperature">20°C </span>
+                <span class="min-temperature" id="min-temperature"> 13°C</span>
+              </div>
+            </div>
           </div>
-      </div>
         </div>
-        
-
-
       </div>
-      <div class = "open-source"><a href="https://github.com/rachelofyork/weather-app" target="_blank" class="open-source-link">Open-source code</a> by Rachel Hollingworth</div>
+      <div class="open-source">
+        <a
+          href="https://github.com/rachelofyork/weather-app"
+          target="_blank"
+          class="open-source-link"
+          >Open-source code</a
+        >
+        by Rachel Hollingworth
+      </div>
     </div>
     <script src="src/index.js"></script>
   </body>

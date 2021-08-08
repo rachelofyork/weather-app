@@ -110,7 +110,7 @@ function displayTemperatureFromLocation(response) {
   document.querySelector("#weather").innerHTML = response.data.weather[0].main;
   document.querySelector("#wind").innerHTML = `Wind: ${Math.round(
     response.data.wind.speed
-  )} km/h`;
+  )} mph`;
   document.querySelector(
     "#humidity"
   ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
@@ -208,37 +208,6 @@ let days = [
   return days[day];
 
 }
-
-
-
-
-//Unit conversion
-
-function displayFahrenheit(event) {
-  event.preventDefault();
-let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
- let temperature = document.querySelector("#temperature")
- temperature.innerHTML = Math.round(fahrenheitTemperature)
- fahrenheitLink.classList.remove("active");
- celsiusLink.classList.add("active");
-}
-
-function displayCelsius(event) {
-  event.preventDefault();
-  let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = Math.round(celsiusTemperature);
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-}
-
-let celsiusTemperature = null;
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsius);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheit);
-
 
 
 
