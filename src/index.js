@@ -3,7 +3,7 @@
 function lightTheme(event){
   event.preventDefault();
  
-document.getElementById('weather-app').style.background =  '#82e7b7'
+document.getElementById('weather-app').style.background =  'linear-gradient(68.6deg, rgb(252, 165, 241) 1.8%, rgb(181, 255, 255) 100.5%)';
  document.getElementById('weather-app').style.color = 'black'
   document.getElementById('celsius-link').style.color = 'black'
   document.getElementById('fahrenheit-link').style.color = 'black'
