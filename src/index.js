@@ -19,7 +19,7 @@ document.getElementById('weather-app').style.background =  'linear-gradient(68.6
 function darkTheme(event) {
   event.preventDefault();
 
-  document.getElementById('weather-app').style.background = '#303030'
+  document.getElementById('weather-app').style.background = 'linear-gradient(177.9deg, rgb(58, 62, 88) 3.6%, rgb(119, 127, 148) 105.8%)'
   document.getElementById('weather-app').style.color = 'white'
   document.getElementById('celsius-link').style.color = 'white'
   document.getElementById('fahrenheit-link').style.color = 'white'
